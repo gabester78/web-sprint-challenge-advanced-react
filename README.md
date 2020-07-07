@@ -29,14 +29,43 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+   By using constructor() and super() we can then build stateful class components.
 
 2. Describe the different phases of the component lifecycle.
+   Initialization phase to define default values, mounting phase to show the DOM what to render, updating the components with our data,
+   and unmounting any unused components or functions for clean up and less memory being used.
 
 3. Demonstrate an understanding of class component lifecycle methods.
+   A good example would be creating a nav bar that switches states depending on the user's role. A school webapp might have
+   different options if you're a teacher or a student. Which nav bar mounts to the dom would be dependent on that. The profile
+   section of it would also update with the user data. Finally the nav bar would unmount and the default nav bar would return
+   when the user logs out.
 
 4. Define stateful logic.
+   Code that uses state.
+
+<!-- this.state = {
+      gabe: [],
+    }; -->
 
 5. Describe how to test a React component with React Testing Library.
+   Create your test in a .test file using react testing library code.
+
+<!-- describe the test
+test("test first input field", () => {
+
+  how/where to find whatever you're testing
+  const { getByLabelText } = render(<ContactForm />);
+
+  put that information in a var if it exists
+  const input = getByLabelText(/first name*/i);
+
+  describe the action you would like the test to take
+  fireEvent.change(input, { target: { value: "Gab" } });
+
+  check to make sure the information was passed to the DOM
+  expect(input).toBeInTheDocument();
+}); -->
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
